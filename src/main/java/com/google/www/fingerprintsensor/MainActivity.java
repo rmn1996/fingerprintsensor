@@ -45,15 +45,8 @@ public class MainActivity extends AppCompatActivity {
         FingerprintManager fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
         textView = (TextView) findViewById(R.id.errorText);
         if(!fingerprintManager.isHardwareDetected()){
-            /**
-             * An error message will be displayed if the device does not contain the fingerprint hardware.
-             * However if you plan to implement a default authentication method,
-             * you can redirect the user to a default authentication activity from here.
-             * Example:
-             * Intent intent = new Intent(this, DefaultAuthenticationActivity.class);
-             * startActivity(intent);
-             */
-            textView.setText("Your Device does not have a Fingerprint Sensor");
+            
+            textView.setText("Your Device ia incompatiable as it does not have a Fingerprint Sensor");
         }
         else
         {
